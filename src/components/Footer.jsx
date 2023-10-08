@@ -1,4 +1,7 @@
+import React from "react";
 import { Typography } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
+import Log from "./vhgb copy.png";
 
 const LINKS = [
   {
@@ -20,14 +23,17 @@ const currentYear = new Date().getFullYear();
 export default function Example() {
   return (
     <footer className="relative w-full bg-blue-50 dark:bg-slate-800 dark:text-white text-black">
-      <div className="mx-auto w-full max-w-7xl px-8">
+      <div className="mx-auto w-full max-w-7xl px-8 pt-5">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           {/* <Typography variant="h5" className="mb-6">
             Material Tailwind
           </Typography> */}
-          <h1 className="mb-10 tracking-tighter ml-10 bg-gradient-to-r from-blue-400 via-blue-900 to-green-300 bg-clip-text sm:text-3xl md:text-3xl lg:text-3xl font-extrabold text-transparent">
-            PlaceWise
-          </h1>
+          <Link to="/" className="flex items-center">
+            <img src={Log} className="h-8 mr-3" alt="Flowbite Logo" />
+            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              PlaceWise
+            </span>
+          </Link>
           <div className="grid grid-cols-3 justify-between gap-4 dark:text-white text-black hover:text-blue-900">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
@@ -61,8 +67,7 @@ export default function Example() {
             className="mb-4 text-center font-normal text-blue-gray-900 dark:text-white md:mb-0"
             // Add 'dark:text-white' class here
           >
-            &copy; {currentYear}{" "}
-            <a href="https://material-tailwind.com/">Material Tailwind</a>. All
+            &copy; {currentYear} <Link href="/">PlaceWise - India</Link>. All
             Rights Reserved.
           </Typography>
           <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
@@ -152,6 +157,11 @@ export default function Example() {
                 />
               </svg>
             </Typography>
+            <img
+              className="opacity-80 transition-opacity hover:opacity-100 h-5 w-5"
+              src={`http://avatar-g88m.onrender.com/generate-image?name=place`}
+              alt="."
+            />
           </div>
         </div>
       </div>

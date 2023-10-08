@@ -6,6 +6,7 @@ import App from "./App";
 import BlogView from "./Pages/blog";
 import BlogWrite from "./Pages/blogwrite";
 import Login from "./components/Login";
+import Signup from "./Pages/Signup";
 import { AuthProvider } from "./components/AuthContext"; // Import AuthProvider
 // import Login from "./components/Login";
 import BlogViewId from "./Pages/blogview";
@@ -17,6 +18,7 @@ ReactDOM.render(
       <AuthProvider>
         <Routes>
           <Route path="/" element={<App />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/blog" element={<BlogView />} />
           <Route path="/write" element={<BlogWrite />} />

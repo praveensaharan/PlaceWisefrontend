@@ -62,9 +62,9 @@ function Navbar() {
             <li>
               <Link
                 to="/"
-                className={`block py-2 pl-3 pr-4 rounded hover:bg-gray-100 ${
+                className={`block py-2 pl-3 pr-4 rounded ${
                   location.pathname === "/"
-                    ? "text-blue-500 font-semibold bg-blue-50 dark:bg-transparent" // Add more specific styles for the active tab
+                    ? "text-blue-500 font-semibold dark:bg-transparent" // Add more specific styles for the active tab
                     : "text-black dark:text-white"
                 } md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
                 aria-current="page"
@@ -76,9 +76,9 @@ function Navbar() {
             <li>
               <Link
                 to="/blog"
-                className={`block py-2 pl-3 pr-4 rounded hover:bg-gray-100 ${
+                className={`block py-2 pl-3 pr-4 rounded  ${
                   location.pathname === "/blog"
-                    ? "text-blue-500 font-semibold bg-blue-50 dark:bg-transparent" // Add more specific styles for the active tab
+                    ? "text-blue-500 font-semibold dark:bg-transparent" // Add more specific styles for the active tab
                     : "text-black dark:text-white"
                 } md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
               >
@@ -88,9 +88,9 @@ function Navbar() {
             <li>
               <Link
                 to="/write"
-                className={`block py-2 pl-3 pr-4 rounded hover:bg-gray-100 ${
+                className={`block py-2 pl-3 pr-4 rounded ${
                   location.pathname === "/write"
-                    ? "text-blue-500 font-semibold bg-blue-50 dark:bg-transparent" // Add more specific styles for the active tab
+                    ? "text-blue-500 font-semibold dark:bg-transparent" // Add more specific styles for the active tab
                     : "text-black dark:text-white"
                 } md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700`}
               >

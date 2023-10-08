@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 // import UserProfileTable from "./tablecom";
+import LoadingComponent from "./Loading";
 
 const Base_url = "https://jobs-g0ol.onrender.com";
 
@@ -86,11 +87,7 @@ export default function Write() {
   if (!blog) {
     return (
       <section className="py-24 lg:pt-20 lg:pb-32 bg-slate-100 dark:bg-slate-700 overflow-hidden">
-        <div className="my-16 bg-slate-100 dark:bg-slate-700">
-          <div className="flex flex-col sm:flex-row">
-            <div>Blog not found</div>
-          </div>
-        </div>
+        <LoadingComponent />
       </section>
     );
   }
@@ -293,8 +290,8 @@ export default function Write() {
           </div>
         </div>
 
-        <div className="p-4 sm:p-8">
-          <p className="mr-2 text-gray-500 dark:text-gray-400 whitespace-pre-wrap">
+        <div className="sm:p-8 mx-5 sm:mx-24 bg-blue-50 rounded-2xl p-2">
+          <p className="text-gray-500 dark:text-gray-400 whitespace-pre-wrap">
             {blog.description}
           </p>
         </div>
@@ -303,7 +300,12 @@ export default function Write() {
             Comments
           </div>
           {!comment ? (
-            <div>No Any Comments</div>
+            // <div>No Any Comments</div>
+            <div className="sm:p-8 mx-5 sm:mx-24">
+              <p className="text-gray-500 dark:text-gray-400 whitespace-pre-wrap">
+                No Any Comments
+              </p>
+            </div>
           ) : (
             <div className="flex flex-col space-y-4">
               {comment.map((comm) => (
@@ -328,7 +330,7 @@ export default function Write() {
           )}
 
           <div className="mt-8 bg-slate-200 rounded-lg dark:bg-slate-600">
-            <form onSubmit={handleFormSubmit}>
+            <form onSubmit={handleFormSubmit} className="p-4">
               <input
                 className="w-full sm:w-11/12 md:w-[90%] h-10 mb-1 pr-5 pl-3 rounded-lg text-sm bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:bg-white dark:focus:bg-gray-800 focus:ring-2 focus:ring-blue-500"
                 type="text"
