@@ -1,4 +1,5 @@
 import React from "react";
+import Log from "./vhgb copy.png";
 
 function index() {
   return (
@@ -32,135 +33,123 @@ function index() {
                   Your Campus
                 </h1>
               </div>
-              <div
-                tabIndex={0}
-                aria-label="group of cards"
-                className="focus:outline-none mt-20 flex flex-wrap justify-center gap-10 px-4"
-              >
-                <div
-                  tabIndex={0}
-                  aria-label="card 1"
-                  className="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
-                >
-                  <div className="w-20 h-20 relative mr-5">
-                    <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1" />
-                    <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
-                      <img
-                        src="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG1.svg"
-                        alt="drawer"
-                      />
+              <div className="w-full bg-white p-4 md:px-16 pt-10 dark:bg-slate-300">
+                <div className="container mx-auto">
+                  <div className="flex flex-wrap justify-center items-center xl:justify-between md:justify-around sm:justify-around lg:justify-around">
+                    {/* Section 1 */}
+                    <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-8 mb-8 sm:mb-12 xl:max-w-sm lg:w-2/5 px-4 md:px-5">
+                      <div className="overflow-hidden shadow-md dark:bg-slate-800 bg-slate-200 border-2 border-red-100 dark:border-blue-200 rounded-2xl">
+                        <div className="absolute -mt-16 w-full flex justify-center">
+                          <div className="h-24 w-24">
+                            <img
+                              src={Log}
+                              alt=""
+                              className="rounded-full object-cover h-full w-full shadow-md"
+                            />
+                          </div>
+                        </div>
+                        <div className="px-2 mt-4">
+                          <div className="font-bold text-3xl text-center pb-1 dark:text-blue-100">
+                            Naveen Gowda J
+                          </div>
+
+                          <div className="w-full flex justify-center pt-2 pb-2">
+                            <a href="javascript:void(0)" className="mx-2">
+                              <div>avg. ctc</div>
+                            </a>
+                            <a href="javascript:void(0)" className="mx-2">
+                              <div>total companies</div>
+                            </a>
+                            <a href="javascript:void(0)" className="mx-2">
+                              <div>last date</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="w-10/12">
-                    <h2
-                      tabIndex={0}
-                      className="focus:outline-none text-lg font-bold leading-tight text-gray-800"
-                    >
-                      Create Beautiful, Custom-Fit Clothing with Ease
-                    </h2>
-                    <p
-                      tabIndex={0}
-                      className="focus:outline-none text-base text-gray-600 leading-normal pt-2 dark:text-gray-200"
-                    >
-                      Experience the joy of wearing clothing that perfectly fits
-                      your body and style, made effortlessly with our
-                      user-friendly platform.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  tabIndex={0}
-                  aria-label="card 2"
-                  className="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
-                >
-                  <div className="w-20 h-20 relative mr-5">
-                    <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1" />
-                    <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
-                      <img
-                        src="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG2.svg"
-                        alt="check"
-                      />
+                    <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-8 mb-8 sm:mb-12 xl:max-w-sm lg:w-2/5 px-4 md:px-5">
+                      <div className="overflow-hidden shadow-md dark:bg-slate-800 bg-slate-200 border-2 border-red-100 dark:border-blue-200 rounded-2xl">
+                        <div className="absolute -mt-16 w-full flex justify-center">
+                          <div className="h-24 w-24">
+                            <img
+                              src={Log}
+                              alt=""
+                              className="rounded-full object-cover h-full w-full shadow-md"
+                            />
+                          </div>
+                        </div>
+                        <div className="px-2 mt-4">
+                          <div className="font-bold text-3xl text-center pb-1 dark:text-blue-100">
+                            Naveen Gowda J
+                          </div>
+
+                          <div className="w-full flex justify-center pt-2 pb-2">
+                            <a href="javascript:void(0)" className="mx-2">
+                              <div>avg. ctc</div>
+                            </a>
+                            <a href="javascript:void(0)" className="mx-2">
+                              <div>total companies</div>
+                            </a>
+                            <a href="javascript:void(0)" className="mx-2">
+                              <div>last date</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="w-10/12">
-                    <h2
-                      tabIndex={0}
-                      className="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
-                    >
-                      High-Quality Tailoring You Can Rely On
-                    </h2>
-                    <p
-                      tabIndex={0}
-                      className="focus:outline-none text-base text-gray-600 leading-normal pt-2 dark:text-gray-200"
-                    >
-                      Trust in our skilled tailors' craftsmanship, ensuring
-                      top-notch quality for all your garments and a wardrobe
-                      that stands the test of time.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  tabIndex={0}
-                  aria-label="card 3"
-                  className="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
-                >
-                  <div className="w-20 h-20 relative mr-5">
-                    <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1" />
-                    <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
-                      <img
-                        src="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG3.svg"
-                        alt="html tag"
-                      />
+                    <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-8 mb-8 sm:mb-12 xl:max-w-sm lg:w-2/5 px-4 md:px-5">
+                      <div className="overflow-hidden shadow-md dark:bg-slate-800 bg-slate-200 border-2 border-red-100 dark:border-blue-200 rounded-2xl">
+                        <div className="px-2 mt-4">
+                          <div className="font-bold text-3xl text-center pb-1 dark:text-blue-100">
+                            Naveen Gowda J
+                          </div>
+
+                          <div className="w-full flex justify-center pt-2 pb-2">
+                            <a href="javascript:void(0)" className="mx-2">
+                              <div>avg. ctc</div>
+                            </a>
+                            <a href="javascript:void(0)" className="mx-2">
+                              <div>total companies</div>
+                            </a>
+                            <a href="javascript:void(0)" className="mx-2">
+                              <div>last date</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="w-10/12">
-                    <h2
-                      tabIndex={0}
-                      className="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
-                    >
-                      Tailored by Experts for Your Unique Style
-                    </h2>
-                    <p
-                      tabIndex={0}
-                      className="focus:outline-none text-base text-gray-600 leading-normal pt-2 dark:text-gray-200"
-                    >
-                      Our team of expert tailors is dedicated to understanding
-                      your individual preferences, creating clothing that
-                      reflects your personality and showcases your distinct
-                      style.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  tabIndex={0}
-                  aria-label="card 4"
-                  className="focus:outline-none flex sm:w-full md:w-5/12 pb-20"
-                >
-                  <div className="w-20 h-20 relative mr-5">
-                    <div className="absolute top-0 right-0 bg-indigo-100 rounded w-16 h-16 mt-2 mr-1" />
-                    <div className="absolute text-white bottom-0 left-0 bg-indigo-700 rounded w-16 h-16 flex items-center justify-center mt-2 mr-3">
-                      <img
-                        src="https://tuk-cdn.s3.amazonaws.com/can-uploader/icon_and_text-SVG4.svg"
-                        alt="monitor"
-                      />
+                    <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-8 mb-8 sm:mb-12 xl:max-w-sm lg:w-2/5 px-4 md:px-5">
+                      <div className="overflow-hidden shadow-md dark:bg-slate-800 bg-slate-200 border-2 border-red-100 dark:border-blue-200 rounded-2xl">
+                        <div className="absolute -mt-16 w-full flex justify-center">
+                          <div className="h-24 w-24">
+                            <img
+                              src={Log}
+                              alt=""
+                              className="rounded-full object-cover h-full w-full shadow-md"
+                            />
+                          </div>
+                        </div>
+                        <div className="px-2 mt-4">
+                          <div className="font-bold text-3xl text-center pb-1 dark:text-blue-100">
+                            Naveen Gowda J
+                          </div>
+
+                          <div className="w-full flex justify-center pt-2 pb-2">
+                            <a href="javascript:void(0)" className="mx-2">
+                              <div>avg. ctc</div>
+                            </a>
+                            <a href="javascript:void(0)" className="mx-2">
+                              <div>total companies</div>
+                            </a>
+                            <a href="javascript:void(0)" className="mx-2">
+                              <div>last date</div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="w-10/12">
-                    <h2
-                      tabIndex={0}
-                      className="focus:outline-none text-lg font-semibold leading-tight text-gray-800"
-                    >
-                      The Last Tailoring Service You'll Ever Need
-                    </h2>
-                    <p
-                      tabIndex={0}
-                      className="focus:outline-none text-base text-gray-600 leading-normal pt-2 dark:text-gray-200"
-                    >
-                      Embrace tailor-made fashion with confidence, knowing our
-                      service offers an unparalleled selection of skilled
-                      tailors, ensuring a lifetime of perfectly tailored
-                      clothing.
-                    </p>
+                    {/* Section 2 (Copy and paste the same structure as Section 1) */}
+                    {/* Section 3 (Copy and paste the same structure as Section 1) */}
                   </div>
                 </div>
               </div>

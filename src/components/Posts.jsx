@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import LoadingComponent from "./Loading";
 import Signup from "./Signup";
 import Search from "../Assets/search.jpg";
+import Log from "./vhgb copy.png";
 
 const Base_url = "https://jobs-g0ol.onrender.com";
 
@@ -72,15 +73,20 @@ export default function PostsSection() {
     try {
       const response = await fetch(`${Base_url}/jobs`);
       const data = await response.json();
-      // console.log(data);
-      setBlogs(data);
+
+      const blogsWithNumericCtc = data.map((blog) => ({
+        ...blog,
+        ctc: parseFloat(blog.ctc),
+        gross: parseFloat(blog.gross),
+      }));
+
+      setBlogs(blogsWithNumericCtc);
     } catch (error) {
       console.error("Error fetching blogs:", error);
     } finally {
       setLoading(false); // This should be inside the 'finally' block
     }
   };
-
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
@@ -99,12 +105,90 @@ export default function PostsSection() {
     return new Date(inputDate).toLocaleDateString(undefined, options);
   }
 
+  const totalCompanies = filteredBlogs.length;
+
+  const totalCtc = filteredBlogs.reduce(
+    (acc, currentBlog) => acc + currentBlog.ctc,
+    0
+  );
+  const totalGross = filteredBlogs.reduce(
+    (acc, currentBlog) => acc + currentBlog.gross,
+    0
+  );
+
+  const averageCtc = totalCtc / totalCompanies;
+  const formattedAverageCtc = new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    minimumFractionDigits: 2,
+  }).format(averageCtc);
+
+  const averageGross = totalGross / totalCompanies;
+  const formattedAverageGross = new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    minimumFractionDigits: 2,
+  }).format(averageGross);
+
   return (
     <section className="py-24 lg:pt-20 lg:pb-32 bg-white overflow-hidden dark:bg-slate-700">
       <div className="container px-4 mx-auto">
         <h1 className="mb-10 tracking-tighter ml-10 bg-gradient-to-r from-yellow-400 via-blue-500 to-purple-600 bg-clip-text text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent">
           All Companies
         </h1>
+        <div className="container flex flex-col md:flex-row items-center">
+          <div className="overflow-hidden shadow-md dark:bg-slate-800 bg-slate-200 border-2 border-red-100 dark:border-blue-200 rounded-2xl mb-3 md:mb-0 md:mr-3 hover:bg-transparent">
+            <div className="font-bold text-3xl text-center pb-1 dark:text-blue-100">
+              Summary
+            </div>
+            <div className="w-full flex justify-center pt-2 pb-2 ">
+              <div className="text-gray-500 dark:text-gray-100 mx-2 font-semibold">
+                Avg. CTC: {formattedAverageCtc} lacs.
+              </div>
+
+              <div className="text-gray-500 dark:text-gray-100 mx-2">
+                Total Companies: {totalCompanies}
+              </div>
+              <div className="text-gray-500 dark:text-gray-100 mx-2 font-semibold">
+                Avg. Gross: {formattedAverageGross} lacs.
+              </div>
+            </div>
+          </div>
+
+          <div className="relative rounded-lg p-2 overflow-hidden glow sm:ml-48">
+            <input
+              type="text"
+              placeholder="Search by Company Name"
+              className="rounded-xl border-2 border-red-100 flex-1 px-6 py-2 text-gray-700 focus:outline-none shadow-lg dark:bg-gray-500 dark:text-gray-100 hover:bg-slate-100"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              style={{
+                backgroundImage: `url(${Search})`,
+                backgroundSize: "1.5rem",
+                backgroundPosition: "calc(100% - 1rem) center",
+                backgroundRepeat: "no-repeat",
+                paddingRight: "2.5rem",
+              }}
+            />
+          </div>
+        </div>
+
+        {/* <div className="container">
+          {" "}
+          <div className="overflow-hidden shadow-md dark:bg-slate-800 bg-slate-200 border-2 border-red-100 dark:border-blue-200 rounded-2xl">
+            <div className="font-bold text-3xl text-center pb-1 dark:text-blue-100">
+              Summary
+            </div>
+            <div className="w-full flex justify-center pt-2 pb-2">
+              <a href="javascript:void(0)" className="mx-2">
+                <div>avg. ctc</div>
+              </a>
+              <a href="javascript:void(0)" className="mx-2">
+                <div>total companies</div>
+              </a>
+            </div>
+          </div>
+        </div>
         <div className="m-3 flex flex-wrap justify-center items-center">
           <div className="relative rounded-lg p-2 overflow-hidden glow">
             <input
@@ -122,7 +206,7 @@ export default function PostsSection() {
               }}
             />
           </div>
-        </div>
+        </div> */}
 
         <div className="m-3 flex flex-wrap justify-center items-center">
           <button
