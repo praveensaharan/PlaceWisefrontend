@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import LoadingComponent from "./Loading";
 import Signup from "./Signup";
+import Search from "../Assets/search.jpg";
 
 const Base_url = "https://jobs-g0ol.onrender.com";
 
@@ -13,7 +14,18 @@ export default function PostsSection() {
     order: "ascending",
   });
   const [loading, setLoading] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const colorCodes = [
+    "ffb297", // Slightly Darker Light Red
+    "95b8e8", // Slightly Darker Light Blue
+    "9fd9c6", // Slightly Darker Light Green
+    "ffcc92", // Slightly Darker Light Yellow
+    "b190ff", // Slightly Darker Light Purple
+    "9fe8d6", // Slightly Darker Light Cyan
+    "ffa7d5", // Slightly Darker Light Pink
+    "b190ff", // Slightly Darker Light Lavender
+    "9fd9c6", // Slightly Darker Light Mint
+    "e0a0ff", // Slightly Darker Light Orchid
     "ffc5b3", // Light Red
     "a1c9f2", // Light Blue
     "b3ffda", // Light Green
@@ -69,6 +81,15 @@ export default function PostsSection() {
     }
   };
 
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  // Filter the blogs based on the search query
+  const filteredBlogs = sortedBlogs.filter((item) =>
+    item.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   useEffect(() => {
     setLoading(true);
     fetchBlogs();
@@ -79,13 +100,30 @@ export default function PostsSection() {
   }
 
   return (
-    <section className="py-24 lg:pt-20 lg:pb-32 bg-slate-100 overflow-hidden dark:bg-slate-700">
+    <section className="py-24 lg:pt-20 lg:pb-32 bg-white overflow-hidden dark:bg-slate-700">
       <div className="container px-4 mx-auto">
         <h1 className="mb-10 tracking-tighter ml-10 bg-gradient-to-r from-yellow-400 via-blue-500 to-purple-600 bg-clip-text text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent">
           All Companies
         </h1>
-        <Signup />
-        {/* <LoadingComponent /> */}
+        <div className="m-3 flex flex-wrap justify-center items-center">
+          <div className="relative rounded-lg p-2 overflow-hidden glow">
+            <input
+              type="text"
+              placeholder="Search by Company Name"
+              className="rounded-xl border-2 border-black flex-1 px-6 py-2 text-gray-700 focus:outline-none shadow-lg dark:bg-gray-500 dark:text-gray-100 hover:bg-slate-100"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              style={{
+                backgroundImage: `url(${Search})`, // Use the image as a background
+                backgroundSize: "1.5rem", // Adjust the size as needed
+                backgroundPosition: "calc(100% - 1rem) center", // Adjust position as needed
+                backgroundRepeat: "no-repeat",
+                paddingRight: "2.5rem", // Ensure enough space for the image
+              }}
+            />
+          </div>
+        </div>
+
         <div className="m-3 flex flex-wrap justify-center items-center">
           <button
             onClick={() => handleSortClick("name")}
@@ -114,7 +152,7 @@ export default function PostsSection() {
           <LoadingComponent />
         ) : (
           <div className="flex flex-wrap -m-4">
-            {sortedBlogs.map((item) => (
+            {filteredBlogs.map((item) => (
               <div className="xl:w-1/4 md:w-1/2 p-4 w-full" key={item._id}>
                 <Link to={`/blog/${item._id}`}>
                   <div className="flex-1 flex flex-col h-full bg-blue-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900 p-6 rounded-lg border-2 border-solid border-indigo-300">

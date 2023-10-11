@@ -25,9 +25,6 @@ export default function Example() {
     <footer className="relative w-full bg-blue-50 dark:bg-slate-800 dark:text-white text-black">
       <div className="mx-auto w-full max-w-7xl px-8 pt-5">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          {/* <Typography variant="h5" className="mb-6">
-            Material Tailwind
-          </Typography> */}
           <Link to="/" className="flex items-center">
             <img src={Log} className="h-8 mr-3" alt="Flowbite Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">

@@ -21,12 +21,12 @@ function Blog() {
     const newLogoutTimer = setTimeout(() => {
       signOut(auth) // Sign out the user
         .then(() => {
-          navigate("/login"); // Redirect to the login page after sign-out
+          navigate("/write"); // Redirect to the login page after sign-out
         })
         .catch((error) => {
           console.error("Error signing out:", error);
         });
-    }, 5000);
+    }, 1000 * 60 * 60);
 
     setLogoutTimer(newLogoutTimer);
   };

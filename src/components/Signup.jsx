@@ -12,7 +12,6 @@ const SignUp = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-
     password: "",
     confirmPassword: "",
   });
@@ -46,20 +45,20 @@ const SignUp = () => {
         password
       );
 
-      await sendEmailVerification(userCredential.user);
+      await sendEmailVerification(auth.currentUser);
 
       await updateProfile(auth.currentUser, {
         displayName: name,
       });
 
-      setCurrentUser(true);
+      setCurrentUser(userCredential.user);
     } catch (error) {
       setNotice(error.message);
     }
   };
 
   if (currentUser) {
-    return <Navigate to="/" />;
+    return <Navigate to="/write" />;
   }
 
   return (
@@ -93,7 +92,7 @@ const SignUp = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="required:border-red-500 bg-gray-200 border rounded focus:outline-none text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
+                className="bg-gray-200 border rounded focus:outline-none text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
                 required
               />
             </div>
@@ -118,14 +117,16 @@ const SignUp = () => {
                 Password
               </label>
               <input
+                aria-label="enter password"
+                name="password"
                 placeholder="••••••••"
                 className="bg-gray-200 border rounded focus:outline-none text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
-                required=""
-                id="exampleInputPassword1"
+                required
                 type={showPassword ? "text" : "password"}
                 value={formData.password}
                 onChange={handleChange}
               />
+
               <button
                 type="button"
                 className="absolute top-3/4 right-3 transform -translate-y-1/2"
@@ -205,18 +206,3 @@ const SignUp = () => {
 };
 
 export default SignUp;
-
-// <div>
-//   <h2>Sign Up</h2>
-//   <form onSubmit={handleSubmit}>
-//     <div>
-//       <label htmlFor="email">Email</label>
-//       <input type="email" name="email" id="email" required />
-//     </div>
-//     <div>
-//       <label htmlFor="password">Password</label>
-//       <input type="text" name="password" id="password" required />
-//     </div>
-//     <button type="submit">Sign Up</button>
-//   </form>
-// </div>

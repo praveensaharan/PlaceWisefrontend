@@ -5,6 +5,8 @@ import Posts from "./components/Posts";
 // import PostsView from "./components/PostsView";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Collages from "./components/Collages";
+// import News from "./components/newsletter";
 
 function App() {
   return (
@@ -12,8 +14,8 @@ function App() {
       <Navbar />
 
       <Header />
-      <Posts />
-
+      <Collages />
+      {/* <News /> */}
       <Footer />
     </div>
   );
