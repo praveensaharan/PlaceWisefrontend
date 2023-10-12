@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import LoadingComponent from "./Loading";
-import Signup from "./Signup";
+
 import Search from "../Assets/search.jpg";
-import Log from "./vhgb copy.png";
 
 const Base_url = "https://jobs-g0ol.onrender.com";
 
@@ -137,7 +136,7 @@ export default function PostsSection() {
           All Companies
         </h1>
         <div className="container flex flex-col md:flex-row items-center">
-          <div className="overflow-hidden shadow-md dark:bg-slate-800 bg-slate-200 border-2 border-red-100 dark:border-blue-200 rounded-2xl mb-3 md:mb-0 md:mr-3 hover:bg-transparent">
+          <div className="overflow-hidden shadow-md dark:bg-slate-800 bg-white border-2 border-red-100 dark:border-blue-200 rounded-2xl mb-3 md:mb-0 md:mr-3 hover:bg-red-50 hover:scale-105 duration-300 ease-in-out">
             <div className="font-bold text-3xl text-center pb-1 dark:text-blue-100">
               Summary
             </div>
@@ -155,7 +154,7 @@ export default function PostsSection() {
             </div>
           </div>
 
-          <div className="relative rounded-lg p-2 overflow-hidden glow sm:ml-48">
+          <div className="relative rounded-lg p-2 overflow-hidden glow sm:ml-48 hover:scale-105 duration-300 ease-in-out">
             <input
               type="text"
               placeholder="Search by Company Name"
@@ -172,41 +171,6 @@ export default function PostsSection() {
             />
           </div>
         </div>
-
-        {/* <div className="container">
-          {" "}
-          <div className="overflow-hidden shadow-md dark:bg-slate-800 bg-slate-200 border-2 border-red-100 dark:border-blue-200 rounded-2xl">
-            <div className="font-bold text-3xl text-center pb-1 dark:text-blue-100">
-              Summary
-            </div>
-            <div className="w-full flex justify-center pt-2 pb-2">
-              <a href="javascript:void(0)" className="mx-2">
-                <div>avg. ctc</div>
-              </a>
-              <a href="javascript:void(0)" className="mx-2">
-                <div>total companies</div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="m-3 flex flex-wrap justify-center items-center">
-          <div className="relative rounded-lg p-2 overflow-hidden glow">
-            <input
-              type="text"
-              placeholder="Search by Company Name"
-              className="rounded-xl border-2 border-black flex-1 px-6 py-2 text-gray-700 focus:outline-none shadow-lg dark:bg-gray-500 dark:text-gray-100 hover:bg-slate-100"
-              value={searchQuery}
-              onChange={handleSearchChange}
-              style={{
-                backgroundImage: `url(${Search})`, // Use the image as a background
-                backgroundSize: "1.5rem", // Adjust the size as needed
-                backgroundPosition: "calc(100% - 1rem) center", // Adjust position as needed
-                backgroundRepeat: "no-repeat",
-                paddingRight: "2.5rem", // Ensure enough space for the image
-              }}
-            />
-          </div>
-        </div> */}
 
         <div className="m-3 flex flex-wrap justify-center items-center">
           <button
@@ -239,7 +203,7 @@ export default function PostsSection() {
             {filteredBlogs.map((item) => (
               <div className="xl:w-1/4 md:w-1/2 p-4 w-full" key={item._id}>
                 <Link to={`/blog/${item._id}`}>
-                  <div className="flex-1 flex flex-col h-full bg-blue-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900 p-6 rounded-lg border-2 border-solid border-indigo-300">
+                  <div className="flex-1 flex flex-col h-full bg-blue-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900 p-6 rounded-lg border-2 border-solid border-indigo-300 bg-opacity-30 hover:scale-105 duration-300 ease-in-out">
                     <img
                       className="h-40 rounded w-full object-cover object-center mb-6"
                       src={`http://avatar-g88m.onrender.com/generate-image?name=${encodeURIComponent(

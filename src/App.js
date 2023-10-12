@@ -6,7 +6,7 @@ import Posts from "./components/Posts";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Collages from "./components/Collages";
-// import News from "./components/newsletter";
+// import News from "./components/test";
 
 function App() {
   return (

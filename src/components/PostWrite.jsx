@@ -181,11 +181,18 @@ export default function Write() {
               <option value="" disabled hidden>
                 Select Branch Option
               </option>
+              <option value="All">All</option>
               <option value="Only CS">Only CS</option>
               <option value="Only CS and elec">Only CS and Elec</option>
               <option value="Only Circuit">Only Circuit</option>
               <option value="Only Core">Only Core</option>
-              <option value="All">All</option>
+              <option value="Only Mtech.">Only Mtech.</option>
+              <option value="Only Mech. and Chem">Only Mech. and Chem</option>
+              <option value="Only Mtech. and Phd">Only Mtech. and Phd</option>
+              <option value="Only CS">Only Elec.</option>
+              <option value="Only CS">Only Mech.</option>
+              <option value="Only CS">Only Civil</option>
+              <option value="Only CS">Only Chem.</option>
             </select>
 
             <select

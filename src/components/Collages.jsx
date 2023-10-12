@@ -1,5 +1,6 @@
 import React from "react";
 import Log from "./vhgb copy.png";
+import Cards from "./test";
 
 function index() {
   return (
@@ -33,126 +34,7 @@ function index() {
                   Your Campus
                 </h1>
               </div>
-              <div className="w-full bg-white p-4 md:px-16 pt-10 dark:bg-slate-300">
-                <div className="container mx-auto">
-                  <div className="flex flex-wrap justify-center items-center xl:justify-between md:justify-around sm:justify-around lg:justify-around">
-                    {/* Section 1 */}
-                    <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-8 mb-8 sm:mb-12 xl:max-w-sm lg:w-2/5 px-4 md:px-5">
-                      <div className="overflow-hidden shadow-md dark:bg-slate-800 bg-slate-200 border-2 border-red-100 dark:border-blue-200 rounded-2xl">
-                        <div className="absolute -mt-16 w-full flex justify-center">
-                          <div className="h-24 w-24">
-                            <img
-                              src={Log}
-                              alt=""
-                              className="rounded-full object-cover h-full w-full shadow-md"
-                            />
-                          </div>
-                        </div>
-                        <div className="px-2 mt-4">
-                          <div className="font-bold text-3xl text-center pb-1 dark:text-blue-100">
-                            Naveen Gowda J
-                          </div>
-
-                          <div className="w-full flex justify-center pt-2 pb-2">
-                            <a href="javascript:void(0)" className="mx-2">
-                              <div>avg. ctc</div>
-                            </a>
-                            <a href="javascript:void(0)" className="mx-2">
-                              <div>total companies</div>
-                            </a>
-                            <a href="javascript:void(0)" className="mx-2">
-                              <div>last date</div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-8 mb-8 sm:mb-12 xl:max-w-sm lg:w-2/5 px-4 md:px-5">
-                      <div className="overflow-hidden shadow-md dark:bg-slate-800 bg-slate-200 border-2 border-red-100 dark:border-blue-200 rounded-2xl">
-                        <div className="absolute -mt-16 w-full flex justify-center">
-                          <div className="h-24 w-24">
-                            <img
-                              src={Log}
-                              alt=""
-                              className="rounded-full object-cover h-full w-full shadow-md"
-                            />
-                          </div>
-                        </div>
-                        <div className="px-2 mt-4">
-                          <div className="font-bold text-3xl text-center pb-1 dark:text-blue-100">
-                            Naveen Gowda J
-                          </div>
-
-                          <div className="w-full flex justify-center pt-2 pb-2">
-                            <a href="javascript:void(0)" className="mx-2">
-                              <div>avg. ctc</div>
-                            </a>
-                            <a href="javascript:void(0)" className="mx-2">
-                              <div>total companies</div>
-                            </a>
-                            <a href="javascript:void(0)" className="mx-2">
-                              <div>last date</div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-8 mb-8 sm:mb-12 xl:max-w-sm lg:w-2/5 px-4 md:px-5">
-                      <div className="overflow-hidden shadow-md dark:bg-slate-800 bg-slate-200 border-2 border-red-100 dark:border-blue-200 rounded-2xl">
-                        <div className="px-2 mt-4">
-                          <div className="font-bold text-3xl text-center pb-1 dark:text-blue-100">
-                            Naveen Gowda J
-                          </div>
-
-                          <div className="w-full flex justify-center pt-2 pb-2">
-                            <a href="javascript:void(0)" className="mx-2">
-                              <div>avg. ctc</div>
-                            </a>
-                            <a href="javascript:void(0)" className="mx-2">
-                              <div>total companies</div>
-                            </a>
-                            <a href="javascript:void(0)" className="mx-2">
-                              <div>last date</div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-8 mb-8 sm:mb-12 xl:max-w-sm lg:w-2/5 px-4 md:px-5">
-                      <div className="overflow-hidden shadow-md dark:bg-slate-800 bg-slate-200 border-2 border-red-100 dark:border-blue-200 rounded-2xl">
-                        <div className="absolute -mt-16 w-full flex justify-center">
-                          <div className="h-24 w-24">
-                            <img
-                              src={Log}
-                              alt=""
-                              className="rounded-full object-cover h-full w-full shadow-md"
-                            />
-                          </div>
-                        </div>
-                        <div className="px-2 mt-4">
-                          <div className="font-bold text-3xl text-center pb-1 dark:text-blue-100">
-                            Naveen Gowda J
-                          </div>
-
-                          <div className="w-full flex justify-center pt-2 pb-2">
-                            <a href="javascript:void(0)" className="mx-2">
-                              <div>avg. ctc</div>
-                            </a>
-                            <a href="javascript:void(0)" className="mx-2">
-                              <div>total companies</div>
-                            </a>
-                            <a href="javascript:void(0)" className="mx-2">
-                              <div>last date</div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Section 2 (Copy and paste the same structure as Section 1) */}
-                    {/* Section 3 (Copy and paste the same structure as Section 1) */}
-                  </div>
-                </div>
-              </div>
+              <Cards />
             </div>
           </section>
         </dh-component>
