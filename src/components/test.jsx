@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import LoadingComponent from "./Loading";
+import LoadingComponent from "../Assets/loading.gif";
 
 const Base_url = "https://jobs-g0ol.onrender.com";
 // Define an array of colleges with their logos
@@ -148,7 +148,7 @@ const CollegeCard = ({ collegeName }) => {
           {/* Display college logo or other info from collegeInfo */}
           {isLoading ? (
             <div className="h-16 w-16">
-              <LoadingComponent />
+              <img alt={collegeName} src={LoadingComponent}></img>
             </div>
           ) : (
             <img
@@ -180,7 +180,10 @@ const CollegeCard = ({ collegeName }) => {
         </div>
       </dl>
 
-      <Link to="/" className="inline-block justify-center items-center">
+      <Link
+        to={`/learn-more/${collegeName}`}
+        className="inline-block justify-center items-center"
+      >
         <button
           className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
           type="button"

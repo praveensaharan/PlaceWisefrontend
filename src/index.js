@@ -10,6 +10,7 @@ import Signup from "./Pages/Signup";
 import { AuthProvider } from "./components/AuthContext"; // Import AuthProvider
 // import Login from "./components/Login";
 import BlogViewId from "./Pages/blogview";
+import Collage from "./Pages/collage";
 
 const root = document.getElementById("root");
 ReactDOM.render(
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Route path="/blog" element={<BlogView />} />
           <Route path="/write" element={<BlogWrite />} />
           <Route path="/blog/:id" element={<BlogViewId />} />
+          <Route path="/learn-more/:collegeName" element={<Collage />} />
         </Routes>
       </AuthProvider>
     </Router>
